@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resource :students
+  resources :coupons, only: [:index, :new, :create] #Route Helpers
+  get '/coupons/:id', to: 'coupons#show', as: 'coupon' #Dynamic Route
 
 
 
