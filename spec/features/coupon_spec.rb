@@ -36,8 +36,8 @@ describe 'form page' do
   it 'creates a record in the database' do
     visit new_coupon_path
 
-    fill_in 'coupon[coupon_code]', with: "FREEITEM"
-    fill_in 'coupon[store]', with: "Quip"
+    fill_in 'coupon[coupon_code]', with: "Quip"
+    fill_in 'coupon[store]', with: "FREEITEM"
 
     click_on "Submit Coupon"
 
