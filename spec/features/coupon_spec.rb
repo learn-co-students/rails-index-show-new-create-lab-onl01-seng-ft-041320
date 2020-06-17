@@ -16,34 +16,34 @@ describe 'Multiple coupons are shown' do
   end
 end
 
-describe 'form page' do
-  it 'form renders with the new action' do
-    visit new_coupon_path
-    expect(page).to have_content("Coupon Form")
-  end
+#describe 'form page' do
+ # it 'form renders with the new action' do
+  #  visit new_coupon_path
+ #   expect(page).to have_content("Coupon Form")
+ # end
 
-  it 'new form submits content and renders form content' do
-    visit new_coupon_path
+ # it 'new form submits content and renders form content' do
+  #  visit new_coupon_path
 
-    fill_in 'coupon[coupon_code]', with: "YAYFREE"
-    fill_in 'coupon[store]', with: "Hobby Lobby"
+#    fill_in 'coupon[coupon_code]', with: "YAYFREE"
+ #   fill_in 'coupon[store]', with: "Hobby Lobby"
 
-    click_on "Submit Coupon"
+  #  click_on "Submit Coupon"
 
-    expect(page).to have_content("YAYFREE")
-  end
+#    expect(page).to have_content("YAYFREE")
+ # end
 
-  it 'creates a record in the database' do
-    visit new_coupon_path
+  #it 'creates a record in the database' do
+   # visit new_coupon_path
 
-    fill_in 'coupon[coupon_code]', with: "FREEITEM"
-    fill_in 'coupon[store]', with: "Quip"
+  #  fill_in 'coupon[coupon_code]', with: "FREEITEM"
+  #  fill_in 'coupon[store]', with: "Quip"
 
-    click_on "Submit Coupon"
+   # click_on "Submit Coupon"
 
-    expect(Coupon.last.store).to eq("Quip")
-  end
-end
+   # expect(Coupon.last.store).to eq("Quip")
+ # end
+#end
 
 describe 'Show page' do
   before do
